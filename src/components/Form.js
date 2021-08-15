@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
 import { useForm } from "react-hook-form";
 import "./style.css";
+
+const style = {
+  border: "2px solid #fa983a",
+};
 
 const Form = () => {
   const [isFormSend, setIsFormSend] = useState(false);
@@ -11,27 +16,6 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  useEffect(() => {
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const bio = document.getElementById("bio");
-    if (errors.name) {
-      name.style.border = "2px solid #e55039";
-    } else if (!errors.name) {
-      name.style.border = "1px solid black";
-    }
-    if (errors.email) {
-      email.style.border = "2px solid #e55039";
-    } else if (!errors.email) {
-      email.style.border = "1px solid black";
-    }
-    if (errors.bio) {
-      bio.style.border = "2px solid #e55039";
-    } else if (!errors.bio) {
-      bio.style.border = "1px solid black";
-    }
-  });
 
   const getBackToForm = () => {
     setIsFormSend((prev) => !prev);
@@ -58,6 +42,7 @@ const Form = () => {
             })}
             id="name"
             type="text"
+            style={errors.name ? style : null}
           />
           {errors.name && <p className="error">{errors.name.message}</p>}
 
@@ -75,6 +60,7 @@ const Form = () => {
             })}
             id="email"
             type="text"
+            style={errors.email ? style : null}
           />
           {errors.email && <p className="error">{errors.email.message}</p>}
 
@@ -87,6 +73,7 @@ const Form = () => {
               minLength: { value: 5, message: "bio is to short" },
             })}
             id="bio"
+            style={errors.bio ? style : null}
           />
           {errors.bio && <p className="error">{errors.bio.message}</p>}
 
