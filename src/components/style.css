@@ -1,0 +1,93 @@
+
+
+.formContainer {
+    position: relative;
+    width: 300px;
+    border: 1px solid black;
+    margin: 20px auto 0 auto;
+    box-shadow: 5px 5px 4px 6px #888888;
+    border-radius: 5px;
+    background-color: #6a89cc;
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    padding: 20px;
+}
+
+input, textarea {
+    border-radius: 3px;
+}
+
+
+input {
+    color: #0c2461;
+    text-transform: uppercase;
+}
+
+label.checkbox {
+    color:white;
+    text-transform: lowercase;
+    font-size: 12px;
+    
+}
+
+input:required {
+    border-color: red;
+  }
+
+label {
+    padding: 10px;
+    color: #0c2461;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+div.send {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background-color: yellow;
+}
+
+.formButton {
+    margin: 10px auto;
+    padding: 10px;
+    width: 100px;
+    color: #667aca;
+    background-color: #b8aa9d;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p.error {
+    color: #b71540;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+.sex{
+
+    margin-top: 5px;
+    padding: 5px;
+}
