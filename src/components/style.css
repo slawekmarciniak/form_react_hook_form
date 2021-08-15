@@ -3,9 +3,9 @@
 .formContainer {
     position: relative;
     width: 300px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 20px auto 0 auto;
-    box-shadow: 5px 5px 4px 6px #888888;
+    box-shadow: 3px 3px 4px 6px #8097ca;
     border-radius: 5px;
     background-color: #6a89cc;
 }
@@ -75,9 +75,9 @@ div.send {
 }
 
 p.error {
-    color: #b71540;
+    color: #8a0f30;
     font-weight: bold;
-    font-size: 10px;
+    font-size: px;
     letter-spacing: 1.5px;
 }
 
